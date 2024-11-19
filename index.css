@@ -1,0 +1,21 @@
+.hand {
+  display: flex;
+  justify-content: center;
+  margin-block: 100px;
+  gap: 25px;
+}
+
+.scores {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  text-align: center;
+}
+
+#player-hand {
+  height: 300px;
+}
+
+#cpu-hand {
+  height: 150px;
+}

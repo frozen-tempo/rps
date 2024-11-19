@@ -4,7 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="rps.js"></script>
+    <link rel="stylesheet" href="index.css" />
   </head>
-  <body></body>
+  <body>
+    <div id="cpu-hand" class="hand">
+      <img src="./Assets/Skull.svg" />
+      <img src="./Assets/Sun.svg" />
+      <img src="./Assets/Fool.svg" />
+    </div>
+    <div id="player-hand" class="hand">
+      <img src="./Assets/Skull.svg" onclick="decideBout('rock')" />
+      <img src="./Assets/Sun.svg" onclick="decideBout('paper')" />
+      <img src="./Assets/Fool.svg" onclick="decideBout('scissors')" />
+    </div>
+    <div class="scores">
+      <span>
+        <p>Round</p>
+        <p id="round-no">1</p>
+      </span>
+      <span>
+        <p>Player Score</p>
+        <p id="player-score">0</p>
+      </span>
+      <span>
+        <p>CPU Score</p>
+        <p id="cpu-score">0</p>
+      </span>
+    </div>
+    <script src="rps.js"></script>
+  </body>
 </html>
