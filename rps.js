@@ -25,6 +25,7 @@ function decideBout(playerChoice) {
   } else {
     result = 2;
   }
+  handleAnimation(playerChoice, cpuChoice);
   incrementScores(result);
   return result;
 }
@@ -40,6 +41,18 @@ function incrementScores(result) {
   document.getElementById("round-no").textContent = roundCounter;
   document.getElementById("player-score").textContent = playerScore;
   document.getElementById("cpu-score").textContent = cpuScore;
+}
+
+function handleAnimation(playerChoice, cpuChoice) {
+  document.getElementById(`player-${playerChoice}`).classList.add("selected");
+  document.getElementById(`cpu-${cpuChoice}`).classList.add("selected");
+
+  setTimeout(function () {
+    document
+      .getElementById(`player-${playerChoice}`)
+      .classList.remove("selected");
+    document.getElementById(`cpu-${cpuChoice}`).classList.remove("selected");
+  }, 2000);
 }
 
 // Initialise the game
